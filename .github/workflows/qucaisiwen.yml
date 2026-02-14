@@ -1,0 +1,23 @@
+name: qucaisiwen
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '50 1/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: qucaisiwen
+        env:
+          yrw410: ${{ secrets.yrw410 }}
+        run: |
+          echo $yrw410 | jq -r .j7 | /bin/bash
+          echo $hgfi4219 | jq -r .x3 | /bin/bash
+          echo $khlyg60 | jq -r .bcoc3 | /bin/bash
+          echo $hksh46644 | jq -r .kn455 | /bin/bash
+          echo $a31 | jq -r .as365 | /bin/bash
+
